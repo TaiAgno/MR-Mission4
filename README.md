@@ -2,14 +2,17 @@
 
 ## Description
 
-The task received was to integrate MongoDB to the existing car matching API.
+The task received was to integrate my local MongoDB to the existing car matching API.
 
-MISSION TO BE ACOMPLISHED
+The mission has been accomplished in my local server.
+
+
+Still to be accomplished: Have a database interface when deployed. I am currently working in a solution for this.
 
 
 SELF-DISCLAIMER
 
-Not available, just yet.
+I finally took upon myself the task of cleaning the code and leaving only what is necessary - I feel so much lighter now!
 
 ## Getting Started
 
@@ -20,18 +23,13 @@ Not available, just yet.
 * Multer
 * Axios
 * Dotenv
-* ES Modules
 * Cors
-* Custom Vision
 * Jest
 * Mongoose
 
 ### Installing
 
-* npm install express multer axios esm cors dotenv jest mongoose
-* npm install @azure/cognitiveservices-customvision-training
-* npm install @azure/cognitiveservices-customvision-prediction
-* npm install @azure/ms-rest-js
+* npm install express multer axios cors dotenv jest mongoose
 
 ### Executing program
 
