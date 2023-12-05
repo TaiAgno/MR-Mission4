@@ -10,6 +10,7 @@ const carSchema = mongoose.Schema({
     url: { type: String },
 });  
 
+// constructor for cars documents
 const Car = mongoose.model('Car', carSchema);
 
 module.exports = Car;

@@ -1,4 +1,3 @@
-// prediction matcher
 // matches the uploaded image with the highest probability from the prediction AI
 const NO_PREDICTIONS_FOUND = "No predictions found";
 const NO_MATCH_FOUND = "No match found";
@@ -36,7 +35,7 @@ mongoose.connect(uri)
                 return { error: NO_MATCH_FOUND, comment: "Sorry, no match found." };
             }
     
-            console.log('Database results:', results); // log the results to help diagnose the issue
+            console.log('Database results:', results);
     
             // return the information associated with the matched car type
             return results.map(result => ({
@@ -51,7 +50,7 @@ mongoose.connect(uri)
 
         } catch (err) {
             console.error(err);
-            return { error: err, comment: "An error occurred while retrieving data from the database." };
+            return { error: err, comment: "An error occurred while retrieving data from the database. Please try again." };
         }
     }
 

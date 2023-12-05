@@ -52,7 +52,6 @@
 											<input type="file" id="fileInput" name="image" autocomplete="off"/>
 										</div>
 										<div class="col-12 col-12-mobilep">
-											<!-- You can customize the button text and styles here -->
 											<button type="submit" class="button alt col-12">Upload</button>
 										</div>
 										<div class="col-12">
@@ -101,7 +100,8 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<!-- fetch setup to update the page with the returned values from the server/backend -->
+
+		<!-- fetch setup to update the page with the returned values from the server/backend/database -->
 		<script>
 			$(document).ready(function () {
 				console.log("Form ready for submission");
@@ -110,8 +110,8 @@
 					e.preventDefault();
 					console.log("Form submitted");
 
-					    // Clear the #result div
-    $("#result").html("");
+					// clear the #result div
+    				$("#result").html("");
 
 		
 					var file = $('#fileInput')[0].files[0];
@@ -119,32 +119,37 @@
 		
 					var formData = new FormData();
 					formData.append('image', file);
-		
-					// when testing locally, use http://localhost:8080/upload
-					// on deployment use https://taimission3.azurewebsites.net/upload
+					
+					// TODO: make this friggin thing work
+					// const isLocalhost = window.location.hostname === 'localhost';
+					// const baseUrl = isLocalhost ? 'http://localhost:8080' : 'https://taimission4.azurewebsites.net';
+					// const uploadUrl = `${baseUrl}/upload`;
+
 					fetch('http://localhost:8080/upload', {
 						method: 'POST',
 						body: formData
 					})
+
 					.then(response => {
-    console.log('Raw response:', response);
-    return response.json();
-})
+    				console.log('Raw response:', response);
+    				return response.json();
+					})
+
 					.then(data => {
-    console.log("Success! Received data:", data);
-    if (data.error) {
-        console.error("Error in response:", data.error);
-        $("#result").html(data.error);
-    } else {
-        data.forEach(car => {
-            var carType = car.carType;
-            var make = car.make;
-            var model = car.model;
-            var year = car.year;
-            var imageUrl = car.imageUrl;
-            var url = car.url;
-            var probability = car.probability;
-            var resultDiv = $(`
+    				console.log("Success! Received data:", data);
+    				if (data.error) {
+        				console.error("Error in response:", data.error);
+        				$("#result").html(data.error);
+    				} else {
+        				data.forEach(car => {
+            			var carType = car.carType;
+            			var make = car.make;
+            			var model = car.model;
+            			var year = car.year;
+            			var imageUrl = car.imageUrl;
+            			var url = car.url;
+            			var probability = car.probability;
+            			var resultDiv = $(`
                 <div>
                     <p>Car Type: ${carType}
                     <br>Make: ${make}

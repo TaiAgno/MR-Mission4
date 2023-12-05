@@ -1,5 +1,5 @@
 // imports all necessary packages and dependencies
-const dotenv = require('dotenv');
+require('dotenv').config();
 const cors = require('cors');
 const fs = require('fs');
 const axios = require('axios');
@@ -8,13 +8,13 @@ const multer = require('multer');
 const FormData = require('form-data');
 const path = require('path');
 const upload = multer({ dest: 'uploads/' });
-const PORT = process.env.PORT || 8080;
+
 const { matchImageWithPrediction } = require('./matcher.js');
+
+const PORT = process.env.PORT || 8080;
 
 const server = express();
 server.use(cors({ origin: '*' }));
-
-dotenv.config();
 
 // establishes server endpoint
 server.post('/upload', upload.single('image'), async (req, res) => {
@@ -39,19 +39,19 @@ server.post('/upload', upload.single('image'), async (req, res) => {
             },
         });
     
-        const responseData = response.data;
-        const matchedImage = await matchImageWithPrediction(responseData);
+        const matchedImage = await matchImageWithPrediction(response.data);
         res.json(matchedImage);
+        
     } catch (error) {
         console.error("Error processing image:", error);
         res.status(500).send('Internal Server Error');
     }
 });
 
-// Serve static files from the public directory
+// serve static files from the public directory
 server.use(express.static(path.join(__dirname, 'public')));
 
-// If no matching route is found default to home
+// if no matching route is found default to home
 server.get('*', (req, res) => {
   res.sendFile('index.html', { root: path.join(__dirname, 'public') });
 });
