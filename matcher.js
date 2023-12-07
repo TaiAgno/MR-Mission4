@@ -1,11 +1,11 @@
 // matches the uploaded image with the highest probability from the prediction AI
 const NO_PREDICTIONS_FOUND = "No predictions found";
 const NO_MATCH_FOUND = "No match found";
-const NEGATIVE = "Sorry, we do not have that in our inventory.";
+const NEGATIVE = "negative";
 const mongoose = require('mongoose');
 const Car = require('./schemas/cars.js');
 
-const uri = "taimission4-server.mongo.cosmos.azure.com";
+const uri = "mongodb://localhost:27017/cars-taim4";
 
 mongoose.connect(uri)
     .then(() => console.log('MongoDB connected'))
