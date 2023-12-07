@@ -1,20 +1,20 @@
 // matches the uploaded image with the highest probability from the prediction AI
 const NO_PREDICTIONS_FOUND = "No predictions found";
 const NO_MATCH_FOUND = "No match found";
-const NEGATIVE = "negative";
+const NEGATIVE = "Sorry, we do not have that in our inventory.";
 const mongoose = require('mongoose');
 const Car = require('./schemas/cars.js');
 
-const uri = "mongodb://localhost:27017/cars-taim4";
+const uri = "taimission4-server.mongo.cosmos.azure.com";
 
 mongoose.connect(uri)
-    .then(() => console.log('MongoDB Connected...'))
+    .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
     async function matchImageWithPrediction(prediction) {
         if (!prediction.predictions || prediction.predictions.length === 0) {
             console.error(NO_PREDICTIONS_FOUND);
-            return { error: NO_PREDICTIONS_FOUND, comment: "Sorry, no match found." };
+            return { error: NO_PREDICTIONS_FOUND, comment: "Sorry, no matches found." };
         }
     
         // find the prediction with the highest probability
