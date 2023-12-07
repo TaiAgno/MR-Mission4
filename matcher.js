@@ -2,6 +2,7 @@
 const NO_PREDICTIONS_FOUND = "No predictions found";
 const NO_MATCH_FOUND = "No match found";
 const NEGATIVE = "negative";
+
 const mongoose = require('mongoose');
 const Car = require('./schemas/cars.js');
 

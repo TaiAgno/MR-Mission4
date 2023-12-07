@@ -55,7 +55,7 @@
 											<button type="submit" class="button alt col-12">Upload</button>
 										</div>
 										<div class="col-12">
-											<div id="result" style="font-weight: bold;"></div>
+											<div id="result" style="display: flex; flex-wrap: wrap;"></div>
 										</div>
 									</div>
 								</form>
@@ -150,14 +150,14 @@
             			var url = car.url;
             			var probability = car.probability;
             			var resultDiv = $(`
-                <div>
+                <div style="padding: 10px; margin: 10px; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); width: 40%;">
                     <p>Car Type: ${carType}
                     <br>Make: ${make}
                     <br>Model: ${model}
                     <br>Year: ${year}
                     <br>Probability: ${probability}
                     <br>More info: <a href="${url}" target="_blank">${url}</a></p>
-                    <p><img src="${imageUrl}" alt="${carType}" style="width:100%; height:auto;"></p>
+                    <p><img src="${imageUrl}" alt="${carType}" style="width:100%; height:auto;"></p><p></p>
                 </div>
             `);
             $("#result").append(resultDiv);
