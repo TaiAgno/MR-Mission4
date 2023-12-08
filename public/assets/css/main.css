@@ -2213,6 +2213,11 @@ input, select, textarea {
 				border: 0;
 			}
 
+/* Hover */
+.hover-enlarge:hover {
+	transform: scale(1.1);
+}
+
 /* Menu */
 
 	ul.menu {

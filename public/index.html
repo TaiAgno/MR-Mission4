@@ -5,170 +5,175 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>TurnersCars - Find Your New Car</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
-
-			<!-- Header -->
-				<div id="header">
-
-					<!-- Logo -->
-					<h1 style="font-size: 2em;"><a href="index.html" id="logo">TurnersCars<br></a></h1>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Our Cars</a></li>
-								<li class="current"><a href="index.html">Find Your New Car</a></li>
-								<li><a href="#">Insurance</a></li>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>
-						</nav>
-
-				</div>
-			<!-- Main -->
-			<section class="col-6 col-12-mobilep" style="align-items: center; width: 50%; margin-left: 25%; margin-top: 5%;">
-				<div class="container">
-					<div class="row" id="content">
-
-						<!-- Content -->
-
-							<article>
-								<header>
-									<h2>Find Your New Car</h2>
-									<p>Upload a photo of the type of car you are searching to find a similar option that we have available.</p>
-								</header>
-							
-								<form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
-									<div class="row gtr-50">
-										<div class="col-6 col-12-mobilep">
-											<input type="file" id="fileInput" name="image" autocomplete="off"/>
-										</div>
-										<div class="col-12 col-12-mobilep">
-											<button type="submit" class="button alt col-12">Upload</button>
-										</div>
-										<div class="col-12">
-											<div id="result" style="display: flex; flex-wrap: wrap;"></div>
-										</div>
-									</div>
-								</form>
-								
-							</article>
+  <head>
+    <title>TurnersCars - Find Your New Car</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <div id="header">
+        <!-- Logo -->
+        <h1 style="font-size: 2em;">
+          <a href="index.html" id="logo">TurnersCars <br>
+          </a>
+        </h1>
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Our Cars</a>
+            </li>
+            <li class="current">
+              <a href="index.html">Find Your New Car</a>
+            </li>
+            <li>
+              <a href="#">Insurance</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Main -->
+      <section class="col-6 col-12-mobilep" style="align-items: center; width: 50%; margin-left: 25%; margin-top: 5%;">
+        <div class="container">
+          <div class="row" id="content">
+            <!-- Content -->
+            <article>
+              <div style="display: flex; justify-content: space-between;">
+                <header style="width: 80%; text-align: left; padding-left: 20px;">
+                    <h2>Find Your New Car</h2>
+                    <p>Upload a photo of the type of car you are searching to find a similar option that we have available.</p>
+                </header>
+                <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data" style="width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 20px;">
+                    <div class="row gtr-50">
+                        <div class="col-6 col-12-mobilep">
+                            <input type="file" id="fileInput" name="image" autocomplete="off" style="margin-bottom: 10px;">
+                            <button type="submit" class="button alt col-12">Upload</button>
+                        </div>
+                        <div class="col-12 col-12-mobilep">
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+	  <div class="col-12">
+		<div id="result" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
+	  </div>
+      <br>
+      <br>
+      <!-- Banner -->
+      <section id="cta" class="wrapper style3">
+        <header>
+          <h2>TurnersCars - We love buying cars! </em>
+          </h2>
+        </header>
+      </section>
+      <!-- Footer -->
+      <div id="footer">
+        <!-- Icons -->
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon brands fa-instagram">
+              <span class="label">Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-facebook-f">
+              <span class="label">Facebook</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Copyright -->
+        <div class="copyright">
+          <ul class="menu">
+            <li>&copy; TurnersCars 2023 | All rights reserved</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- fetch setup to update the page with the returned values from the server/backend/database -->
+    <script>
+      $(document).ready(function() {
+        console.log("Form ready for submission");
+        $("#uploadForm").submit(function(e) {
+          e.preventDefault();
+          console.log("Form submitted");
+          // clear the #result div
+          $("#result").html("");
+          var file = $('#fileInput')[0].files[0];
+          console.log(file);
+          var formData = new FormData();
+          formData.append('image', file);
+          // TODO: make this friggin thing work
+          // const isLocalhost = window.location.hostname === 'localhost';
+          // const baseUrl = isLocalhost ? 'http://localhost:8080' : 'https://taimission4.azurewebsites.net';
+          // const uploadUrl = `${baseUrl}/upload`;
+          fetch('http://localhost:8080/upload', {
+            method: 'POST',
+            body: formData
+          }).then(response => {
+            console.log('Raw response:', response);
+            return response.json();
+          }).then(data => {
+            console.log("Success! Received data:", data);
+            if (data.error) {
+              console.error("Error in response:", data.error);
+              $("#result").html(data.error);
+            } else {
+              data.forEach(car => {
+                var carType = car.carType;
+                var make = car.make;
+                var model = car.model;
+                var year = car.year;
+                var imageUrl = car.imageUrl;
+                var url = car.url;
+                var probability = car.probability;
+                var resultDiv = $(`
+					<div style="padding: 10px; margin: 20px; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); width: 25%;">
+						<p>Car Type: ${carType}
+						<br>Make: ${make}
+    					<br>Model: ${model}
+            			<br>Year: ${year}
+                    	<br>Probability: ${probability}
+                    	<br><br>
+						<a href="${url}" target="_blank">
+    					<img src="${imageUrl}" alt="${carType}" style="width:100%; transition: transform 0.2s;" class="hover-enlarge">
+						</a>
+						</p>
 					</div>
-				</div>
-			</section><br><br>
-			<!-- Banner -->
-				<section id="cta" class="wrapper style3">
-					<header>
-						<h2>TurnersCars - We love buying cars!</em></h2>
-					</header>
-				</section>
-
-			<!-- Footer -->
-				<div id="footer">
-
-					<!-- Icons -->
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					</ul>
-
-					<!-- Copyright -->
-						<div class="copyright">
-							<ul class="menu">
-								<li>&copy; TurnersCars 2023 | All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-		
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-		<!-- fetch setup to update the page with the returned values from the server/backend/database -->
-		<script>
-			$(document).ready(function () {
-				console.log("Form ready for submission");
-		
-				$("#uploadForm").submit(function (e) {
-					e.preventDefault();
-					console.log("Form submitted");
-
-					// clear the #result div
-    				$("#result").html("");
-
-		
-					var file = $('#fileInput')[0].files[0];
-					console.log(file);
-		
-					var formData = new FormData();
-					formData.append('image', file);
-					
-					// TODO: make this friggin thing work
-					// const isLocalhost = window.location.hostname === 'localhost';
-					// const baseUrl = isLocalhost ? 'http://localhost:8080' : 'https://taimission4.azurewebsites.net';
-					// const uploadUrl = `${baseUrl}/upload`;
-
-					fetch('http://localhost:8080/upload', {
-						method: 'POST',
-						body: formData
-					})
-
-					.then(response => {
-    				console.log('Raw response:', response);
-    				return response.json();
-					})
-
-					.then(data => {
-    				console.log("Success! Received data:", data);
-    				if (data.error) {
-        				console.error("Error in response:", data.error);
-        				$("#result").html(data.error);
-    				} else {
-        				data.forEach(car => {
-            			var carType = car.carType;
-            			var make = car.make;
-            			var model = car.model;
-            			var year = car.year;
-            			var imageUrl = car.imageUrl;
-            			var url = car.url;
-            			var probability = car.probability;
-            			var resultDiv = $(`
-                <div style="padding: 10px; margin: 10px; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); width: 40%;">
-                    <p>Car Type: ${carType}
-                    <br>Make: ${make}
-                    <br>Model: ${model}
-                    <br>Year: ${year}
-                    <br>Probability: ${probability}
-                    <br>More info: <a href="${url}" target="_blank">${url}</a></p>
-                    <p><img src="${imageUrl}" alt="${carType}" style="width:100%; height:auto;"></p><p></p>
-                </div>
             `);
-            $("#result").append(resultDiv);
+                $("#result").append(resultDiv);
+              });
+            }
+          }).catch(error => console.error("Fetch error: " + error));
+          return false;
         });
-    }
-})
-        .catch(error => console.error("Fetch error: " + error));
-		
-					return false;
-				});
-			});
-		</script>
-		</body>
+      });
+    </script>
+  </body>
 </html>
